@@ -1,0 +1,126 @@
+Create a Luggage class.
+• Write the data members.
+• Write a non-default constructor takes belongsTo, weight_kilo and capacity_lt as parameter and
+assigns the values. Also, sets the lastUsedId as the object’s luggage_ID and increments it.
+• Write get methods for luggage_ID, belongsTo, weight_kilo and capacity_lt.
+• Write a toString() method that returns luggage_ID, belongsTo, weight_kilo and capacity_lt.
+Create a LuggageList class.
+• Write a static final members MAX_COUNT with value of 5 which latter determines the size of the object
+array, and MAX_KILOS with value of 50. Since, the available helicopter’s cargo capacity allows up to 5
+luggage with total of 50 kilos maximum.
+• Write an object array myLuggages[] created from Luggage class, with MAX_COUNT as size.
+• Write a data member named total_LuggageCount to store the number of luggage that system has.
+• Write an addLuggage() method, that takes a Luggage object as parameter and check if the array is full.
+If it’s not full, add the Luggage object to the Luggage object array and returns true. If the array is full,
+returns false.
+• Write a removeLuggage() method that takes the luggage_ID of the Luggage to be removed. Search the
+sarray to find the given id (Since the type of the parameter is String, you will have to parse it to integer).
+If found, move the last element of the array to the index of the found item and decrement count. If
+successful, return true, otherwise returns false.
+• Write a getLuggage() method that takes ‘belongs to’ information as parameter, searches for that
+luggage in the object array. If found, return the object, otherwise, return null.
+• Write a getAll() method that returns myLuggages object array.
+• Write a getHighestCapacityLuggage() method that searches for the luggage with the highest
+capacity and returns that luggage object.
+• Write a display() method that prints all the luggage objects’ information in the object array to console.
+Create a Main Class called Cargo.
+• In main method, do the following.
+o Input 5 luggages and store them into a LuggageList object.
+o You will scan capacity information as width:height:length in cm like 10:10:10 and convert it to
+liters, thus, try split method of String objects. (HINT: 1000 cm3 equals to 1 liter)
+o Display the contents of LuggageList object by using toString method.
+o Ask the user which luggage to remove and then remove it.
+o Ask the user which luggage to search and then display it.
+o Display the luggage with highest capacity.
+
+
+Example Run:
+Luggage no. 1:
+Belongs to: Yusuf Evren Aykac
+Enter weight in kilos:
+20
+Enter capacity like Width:Height:Length
+10:10:10
+The luggage belonging to: Yusuf Evren Aykac is added to the list.
+Luggage no. 2:
+Belongs to: Yusuf Sevki Gunaydin
+Enter weight in kilos:
+10
+Enter capacity like Width:Height:Length
+15:20:30
+The luggage belonging to: Yusuf Sevki Gunaydin is added to the list.
+Luggage no. 3:
+Belongs to: Nisanur Mühürdaroğlu
+Enter weight in kilos:
+5
+Enter capacity like Width:Height:Length
+11:12:13
+The luggage belonging to: Nisanur Mühürdaroğlu is added to the list.
+Luggage no. 4:
+Belongs to: Ahmet Esad Top
+Enter weight in kilos:
+6
+Enter capacity like Width:Height:Length
+5:6:7
+The luggage belonging to: Ahmet Esad Top is added to the list.
+Luggage no. 5:
+Belongs to: Elif Şanlialp
+Enter weight in kilos:
+8
+Enter capacity like Width:Height:Length
+5:11:9
+Error: Max size of (kilo or/and count) is reached! Cannot add any more luggage!
+-----------------
+Here is a list of the luggages (using toString() method of list object)...
+ID: 500
+Belongs to: Yusuf Evren Aykac
+Weight of the luggage: 20
+Capacity of the luggage: 1.0 Liters
+ID: 501
+Belongs to: Yusuf Sevki Gunaydin
+Weight of the luggage: 10
+Capacity of the luggage: 6.0 Liters
+ID: 502
+Belongs to: Nisanur Mühürdaroğlu
+Weight of the luggage: 5
+Capacity of the luggage: 1.716 Liters
+ID: 503
+Belongs to: Ahmet Esad Top
+Weight of the luggage: 6
+Capacity of the luggage: 0.21 Liters
+ID: 504
+Belongs to: Elif Şanlialp
+Weight of the luggage: 8
+Capacity of the luggage: 0.495 Liters
+------------------
+Which luggage would you like to delete?
+Enter an ID:
+501
+The Luggage belonging to: Yusuf Sevki Gunaydin is removed.
+ID: 500
+Belongs to: Yusuf Evren Aykac
+Weight of the luggage: 20
+Capacity of the luggage: 1.0 Liters
+ID: 504
+Belongs to: Elif Şanlialp
+Weight of the luggage: 8
+Capacity of the luggage: 4.95 Liters
+ID: 502
+Belongs to: Nisanur Mühürdaroğlu
+Weight of the luggage: 5
+Capacity of the luggage: 1.716 Liters
+ID: 503
+Belongs to: Ahmet Esad Top
+Weight of the luggage: 6
+Capacity of the luggage: 2.1 Liters
+------------------
+Whose luggage would you like to search?
+Yusuf Evren Aykac
+Here is the luggage you were looking for...
+ID: 500
+Belongs to: Yusuf Evren Aykac
+Weight of the luggage: 20
+Capacity of the luggage: 1.0 Liters
+-----------------
+The luggage belonging to: Nisanur Mühürdaroğlu has the highest capacity of 1.716 liters.
+-----------------
